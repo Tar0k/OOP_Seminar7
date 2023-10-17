@@ -21,6 +21,23 @@ public partial class ComplexNumber
         _imaginePart = imaginePart;
     }
 
+
+    public static bool TryParse(string complexNumber, out ComplexNumber? result)
+    {
+        try
+        {
+            result = new ComplexNumber(complexNumber);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            result = null;
+            return false;
+        }
+        return true;
+    }
+    
+
     private static double GetPart(string complexNumber, Regex regex)
     {
         var res = regex.Match(complexNumber.Replace(" ", ""));
