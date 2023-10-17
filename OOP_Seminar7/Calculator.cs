@@ -1,7 +1,10 @@
-﻿namespace OOP_Seminar7;
+﻿using NLog;
+
+namespace OOP_Seminar7;
 
 public class Calculator
 {
+    
     public static void Start()
     {
         var resume = true;

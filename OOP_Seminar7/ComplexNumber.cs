@@ -9,7 +9,7 @@ public partial class ComplexNumber
     private readonly double _realPart;
     private readonly double _imaginePart;
 
-    public ComplexNumber(string complexNumber)
+    private ComplexNumber(string complexNumber)
     {
         _realPart = GetPart(complexNumber, RealPartRegex());
         _imaginePart = GetPart(complexNumber, ImaginePartRegex());
