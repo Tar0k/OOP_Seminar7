@@ -28,7 +28,7 @@ public partial class ComplexNumber
         {
             result = new ComplexNumber(complexNumber);
         }
-        catch (Exception ex)
+        catch (Exception ex) when (ex is InvalidCastException or ArgumentException)
         {
             Console.WriteLine(ex.Message);
             result = null;
